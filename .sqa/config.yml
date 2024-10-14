@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/rciam/rciam-federation-registry:
+      branch: master
+      repo: https://github.com/rciam/rciam-federation-registry.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/rciam/rciam-federation-registry git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-saffron-gibbon.sh
+        container: qc.acc_hilly-cream-bombay
+  QC.Doc:
+    repos:
+      github.com/rciam/rciam-federation-registry find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-white-butterfly.sh
+        container: qc.doc_trippy-ruby-sheep
+      github.com/rciam/rciam-federation-registry git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-cerulean-gerbil.sh
+        container: qc.doc_seedy-brown-oriole
+      github.com/rciam/rciam-federation-registry markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-celadon-tamarin.sh
+        container: qc.doc_hilly-buff-oriole
+  QC.Lic:
+    repos:
+      github.com/rciam/rciam-federation-registry licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-cornflower-insect.sh
+        container: qc.lic_nippy-puce-panda
+  QC.Sty:
+    repos:
+      github.com/rciam/rciam-federation-registry jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-tan-whale.sh
+        container: qc.sty_goopy-vermilion-gecko
+  QC.Ver:
+    repos:
+      github.com/rciam/rciam-federation-registry get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-puce-barnacle.sh
+        container: qc.ver_shaggy-pink-ferret
+timeout: 5400
