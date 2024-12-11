@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/rciam/rciam-federation-registry:
       branch: master
@@ -15,38 +15,44 @@ sqa_criteria:
     repos:
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-saffron-gibbon.sh
-        container: qc.acc_hilly-cream-bombay
+        - /usr/bin/env sh .sqa/script.cozy-asparagus-camel.sh
+        container: qc.acc_shabby-cyan-labradoodle
   QC.Doc:
     repos:
       github.com/rciam/rciam-federation-registry find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-white-butterfly.sh
-        container: qc.doc_trippy-ruby-sheep
+        - /usr/bin/env sh .sqa/script.lanky-amethyst-chamois.sh
+        container: qc.doc_flaky-eggplant-turtle
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-cerulean-gerbil.sh
-        container: qc.doc_seedy-brown-oriole
+        - /usr/bin/env sh .sqa/script.pasty-smalt-badger.sh
+        container: qc.doc_snippy-cornflower-cattle
       github.com/rciam/rciam-federation-registry markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-celadon-tamarin.sh
-        container: qc.doc_hilly-buff-oriole
+        - /usr/bin/env sh .sqa/script.pretty-denim-bullfrog.sh
+        container: qc.doc_flabby-jade-tetra
   QC.Lic:
     repos:
       github.com/rciam/rciam-federation-registry licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-cornflower-insect.sh
-        container: qc.lic_nippy-puce-panda
+        - /usr/bin/env sh .sqa/script.leaky-coral-chamois.sh
+        container: qc.lic_wheezy-seashell-buzzard
+  QC.Met:
+    repos:
+      github.com/rciam/rciam-federation-registry validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-ultramarine-mayfly.sh
+        container: qc.met_wheezy-blue-snake
   QC.Sty:
     repos:
       github.com/rciam/rciam-federation-registry jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-tan-whale.sh
-        container: qc.sty_goopy-vermilion-gecko
+        - /usr/bin/env sh .sqa/script.paltry-lavender-cougar.sh
+        container: qc.sty_goopy-cinnamon-eagle
   QC.Ver:
     repos:
       github.com/rciam/rciam-federation-registry get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-puce-barnacle.sh
-        container: qc.ver_shaggy-pink-ferret
+        - /usr/bin/env sh .sqa/script.lanky-charcoal-whale.sh
+        container: qc.ver_lousy-zucchini-lemur
 timeout: 5400

@@ -5,5 +5,5 @@
 
 (
 cd github.com/rciam/rciam-federation-registry &&
-    licensee detect . --confidence 60 --json
+    git rev-parse --is-inside-work-tree 
 )

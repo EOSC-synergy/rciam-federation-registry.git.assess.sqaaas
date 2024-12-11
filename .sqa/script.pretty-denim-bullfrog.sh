@@ -5,5 +5,5 @@
 
 (
 cd github.com/rciam/rciam-federation-registry &&
-    git rev-parse --is-inside-work-tree
+    mdl --json  .
 )
