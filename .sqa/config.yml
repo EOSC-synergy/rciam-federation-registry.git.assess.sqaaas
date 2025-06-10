@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-puce-urchin.sh
-        container: qc.acc_squeaky-amethyst-fousek
+        - /usr/bin/env sh .sqa/script.skimpy-apricot-beaver.sh
+        container: qc.acc_skimpy-black-ocelot
   QC.Doc:
     repos:
       github.com/rciam/rciam-federation-registry find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-viridian-chimpanzee.sh
-        container: qc.doc_seedy-periwinkle-indri
+        - /usr/bin/env sh .sqa/script.gamy-beige-blue.sh
+        container: qc.doc_pasty-blue-opossum
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-champagne-hamster.sh
-        container: qc.doc_zippy-viridian-hyena
+        - /usr/bin/env sh .sqa/script.slaphappy-firebrick-lobster.sh
+        container: qc.doc_wiggy-chocolate-jaguar
       github.com/rciam/rciam-federation-registry markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-ultramarine-beaver.sh
-        container: qc.doc_pretty-amaranth-koala
+        - /usr/bin/env sh .sqa/script.seedy-cream-stingray.sh
+        container: qc.doc_skinny-periwinkle-lemur
   QC.Lic:
     repos:
       github.com/rciam/rciam-federation-registry licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-celadon-bird.sh
-        container: qc.lic_droopy-turquoise-schnauzer
+        - /usr/bin/env sh .sqa/script.skimpy-ochre-tetra.sh
+        container: qc.lic_shaky-purple-dingo
   QC.Met:
     repos:
       github.com/rciam/rciam-federation-registry validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-indigo-beaver.sh
-        container: qc.met_clammy-cobalt-jaguar
+        - /usr/bin/env sh .sqa/script.woozy-tomato-moose.sh
+        container: qc.met_woolly-purple-chicken
   QC.Sty:
     repos:
       github.com/rciam/rciam-federation-registry jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-bronze-zebra.sh
-        container: qc.sty_dorky-ivory-macaw
+        - /usr/bin/env sh .sqa/script.woolly-chestnut-peccary.sh
+        container: qc.sty_gloppy-cyan-chimpanzee
   QC.Ver:
     repos:
       github.com/rciam/rciam-federation-registry get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-charcoal-bison.sh
-        container: qc.ver_flimsy-cinnabar-shark
+        - /usr/bin/env sh .sqa/script.lousy-chartreuse-rat.sh
+        container: qc.ver_paltry-aqua-oyster
 timeout: 5400
