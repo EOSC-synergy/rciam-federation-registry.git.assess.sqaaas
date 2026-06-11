@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/Ophidia
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/rciam/rciam-federation-registry:
       branch: master
@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-charcoal-mongoose.sh
-        container: qc.acc_surly-razzmatazz-civet
+        - /usr/bin/env sh .sqa/script.strawberry_shy_rattlesnake.sh
+        container: qc.acc_porcelain_silly_walrus
   QC.Doc:
     repos:
       github.com/rciam/rciam-federation-registry find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-razzmatazz-ferret.sh
-        container: qc.doc_tasty-denim-goat
+        - /usr/bin/env sh .sqa/script.espresso_ambitious_tarantula.sh
+        container: qc.doc_green_humorous_stingray
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-viridian-chicken.sh
-        container: qc.doc_sunny-turquoise-wildebeest
+        - /usr/bin/env sh .sqa/script.zinnia_philosophical_bullfrog.sh
+        container: qc.doc_incarnadine_mature_dhole
       github.com/rciam/rciam-federation-registry markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-teal-salamander.sh
-        container: qc.doc_lovely-peach-skunk
+        - /usr/bin/env sh .sqa/script.raspberry_assured_baboon.sh
+        container: qc.doc_ice_tough_tortoise
   QC.Lic:
     repos:
       github.com/rciam/rciam-federation-registry licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-seashell-squirrel.sh
-        container: qc.lic_skanky-pink-hamster
+        - /usr/bin/env sh .sqa/script.tangerine_delighted_turtle.sh
+        container: qc.lic_daffodil_playful_baboon
   QC.Met:
     repos:
       github.com/rciam/rciam-federation-registry validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-salmon-tiger.sh
-        container: qc.met_thirsty-mauve-newfoundland
+        - /usr/bin/env sh .sqa/script.banana_attentive_salamander.sh
+        container: qc.met_kiwi_authentic_giraffe
   QC.Sty:
     repos:
       github.com/rciam/rciam-federation-registry jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-chocolate-ragdoll.sh
-        container: qc.sty_muzzy-denim-iguana
+        - /usr/bin/env sh .sqa/script.white_confused_whale.sh
+        container: qc.sty_clove_ambitious_giraffe
   QC.Ver:
     repos:
       github.com/rciam/rciam-federation-registry get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-myrtle-dugong.sh
-        container: qc.ver_crappy-cream-uguisu
+        - /usr/bin/env sh .sqa/script.lime_enigmatic_parrot.sh
+        container: qc.ver_gunmetal_intuitive_goose
 timeout: 5400
